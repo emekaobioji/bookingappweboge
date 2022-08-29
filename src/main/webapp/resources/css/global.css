@@ -1,0 +1,83 @@
+a{
+    font-size: 0.6em;
+    padding: 0.5em;
+}
+h1, .soo{
+    font-size: 0.8em;
+    padding-bottom: 0em;
+}
+.soo{
+    padding-bottom: 0.0em;
+    margin-bottom: 0.0em;
+}
+body{
+    background-color: #ffffff;
+    font-style: normal;
+    color:#363945;
+    font-family: noto sans,sans-serif;
+    font-size: 1em;
+    padding-top: 0em;
+}
+.q_content{
+    font-size: 1em;
+    line-height: 1.3em;
+    padding-bottom: 0.1em;
+}    
+.q_options{
+    font-size: 0.9em;
+    line-height: 1em;
+    border: thin dotted darkgray;
+    align-items:center; 
+}
+.q_answer{
+    font-size: 0.8em;
+    line-height: 1em;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+    color: darkgray;
+}
+input, label{
+    font-size: 1em;
+}
+label{
+    padding-left: 0.1em;
+    vertical-align: top;
+}
+.nav_area{
+    text-align: left;
+    padding-bottom: .5em;
+    padding-top: .5em;
+}
+select, option{
+    font-size: 0.9em;
+    line-height: 1em;
+    color: #00000f;
+    
+    transition: background-color 0.2s, color 0.2s, border-color 0.2s, box-shadow 0.2s;
+    transition-property: background-color, color, border-color, box-shadow;
+    transition-duration: 0.2s, 0.2s, 0.2s, 0.2s;
+    transition-timing-function: ease, ease, ease, ease;
+    transition-delay: 0s, 0s, 0s, 0s;
+}
+td{
+    vertical-align: top;
+}
+.mainheading{
+    background-color: #6666ff;
+    color:#ffffff;
+    font-size: 3.0em;
+    font-family:fantasy;
+    height: 2.0em;
+    padding-top:0.0em;
+    padding-left: 0.0em;
+    margin-top: 0.0em;
+    padding-bottom:0.0em;
+    margin-bottom: 0.0em;
+}
+#multi{
+    background-color: #ffffff;
+    font-style: normal;
+    color:#363945;
+    font-family: noto sans,sans-serif;
+    font-size: 1em;
+}

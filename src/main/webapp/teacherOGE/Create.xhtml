@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+    <ui:composition template="/template.xhtml">
+        <ui:define name="title">
+            <h:outputText value="#{bundle.CreateTeacherOGETitle}"></h:outputText>
+        </ui:define>
+        <ui:define name="body">
+            <h:panelGroup id="messagePanel" layout="block">
+                <h:messages errorStyle="color: red" infoStyle="color: green" layout="table"/>
+            </h:panelGroup>
+            <h:form>
+                <h:panelGrid columns="2">
+                    <h:outputLabel value="#{bundle.CreateTeacherOGELabel_id}" for="id" />
+                    <h:inputText id="id" value="#{teacherOGEController.selected.id}" title="#{bundle.CreateTeacherOGETitle_id}" required="true" requiredMessage="#{bundle.CreateTeacherOGERequiredMessage_id}"/>
+                    <h:outputLabel value="#{bundle.CreateTeacherOGELabel_surname}" for="surname" />
+                    <h:inputText id="surname" value="#{teacherOGEController.selected.surname}" title="#{bundle.CreateTeacherOGETitle_surname}" />
+                    <h:outputLabel value="#{bundle.CreateTeacherOGELabel_firstname}" for="firstname" />
+                    <h:inputText id="firstname" value="#{teacherOGEController.selected.firstname}" title="#{bundle.CreateTeacherOGETitle_firstname}" />
+                    <h:outputLabel value="#{bundle.CreateTeacherOGELabel_othernames}" for="othernames" />
+                    <h:inputText id="othernames" value="#{teacherOGEController.selected.othernames}" title="#{bundle.CreateTeacherOGETitle_othernames}" />
+                </h:panelGrid>
+                <br />
+                <h:commandLink action="#{teacherOGEController.create}" value="#{bundle.CreateTeacherOGESaveLink}" />
+                <br />
+                <br />
+                <h:commandLink action="#{teacherOGEController.prepareList}" value="#{bundle.CreateTeacherOGEShowAllLink}" immediate="true"/>
+                <br />
+                <br />
+                <h:link outcome="/index" value="#{bundle.CreateTeacherOGEIndexLink}"/>
+            </h:form>
+        </ui:define>
+    </ui:composition>
+
+</html>

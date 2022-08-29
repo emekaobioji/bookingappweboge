@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+    <ui:composition template="/template.xhtml">
+        <ui:define name="title">
+            <h:outputText value="#{bundle.CreateBookOGETitle}"></h:outputText>
+        </ui:define>
+        <ui:define name="body">
+            <h:panelGroup id="messagePanel" layout="block">
+                <h:messages errorStyle="color: red" infoStyle="color: green" layout="table"/>
+            </h:panelGroup>
+            <h:form>
+                <h:panelGrid columns="2">
+                    <h:outputLabel value="#{bundle.CreateBookOGELabel_id}" for="id" />
+                    <h:inputText id="id" value="#{bookOGEController.selected.id}" title="#{bundle.CreateBookOGETitle_id}" required="true" requiredMessage="#{bundle.CreateBookOGERequiredMessage_id}"/>
+                    <h:outputLabel value="#{bundle.CreateBookOGELabel_teacherid}" for="teacherid" />
+                    <h:inputText id="teacherid" value="#{bookOGEController.selected.teacherid}" title="#{bundle.CreateBookOGETitle_teacherid}" />
+                    <h:outputLabel value="#{bundle.CreateBookOGELabel_studentid}" for="studentid" />
+                    <h:inputText id="studentid" value="#{bookOGEController.selected.studentid}" title="#{bundle.CreateBookOGETitle_studentid}" />
+                    <h:outputLabel value="#{bundle.CreateBookOGELabel_teamid}" for="teamid" />
+                    <h:inputText id="teamid" value="#{bookOGEController.selected.teamid}" title="#{bundle.CreateBookOGETitle_teamid}" />
+                    <h:outputLabel value="#{bundle.CreateBookOGELabel_classrid}" for="classrid" />
+                    <h:inputText id="classrid" value="#{bookOGEController.selected.classrid}" title="#{bundle.CreateBookOGETitle_classrid}" />
+                    <h:outputLabel value="#{bundle.CreateBookOGELabel_offenceid}" for="offenceid" />
+                    <h:inputText id="offenceid" value="#{bookOGEController.selected.offenceid}" title="#{bundle.CreateBookOGETitle_offenceid}" />
+                    <h:outputLabel value="#{bundle.CreateBookOGELabel_date}" for="date" />
+                    <h:inputText id="date" value="#{bookOGEController.selected.dateofbooking}" title="#{bundle.CreateBookOGETitle_date}" >
+                        <f:convertDateTime pattern="MM/dd/yyyy" />
+                    </h:inputText>
+                </h:panelGrid>
+                <br />
+                <h:commandLink action="#{bookOGEController.create}" value="#{bundle.CreateBookOGESaveLink}" />
+                <br />
+                <br />
+                <h:commandLink action="#{bookOGEController.prepareList}" value="#{bundle.CreateBookOGEShowAllLink}" immediate="true"/>
+                <br />
+                <br />
+                <h:link outcome="/index" value="#{bundle.CreateBookOGEIndexLink}"/>
+            </h:form>
+        </ui:define>
+    </ui:composition>
+
+</html>

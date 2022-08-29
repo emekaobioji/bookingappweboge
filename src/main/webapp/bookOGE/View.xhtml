@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+    <ui:composition template="/template.xhtml">
+        <ui:define name="title">
+            <h:outputText value="#{bundle.ViewBookOGETitle}"></h:outputText>
+        </ui:define>
+        <ui:define name="body">
+            <h:panelGroup id="messagePanel" layout="block">
+                <h:messages errorStyle="color: red" infoStyle="color: green" layout="table"/>
+            </h:panelGroup>
+            <h:form>
+                <h:panelGrid columns="2">
+                    <h:outputText value="#{bundle.ViewBookOGELabel_id}"/>
+                    <h:outputText value="#{bookOGEController.selected.id}" title="#{bundle.ViewBookOGETitle_id}"/>
+                    <h:outputText value="#{bundle.ViewBookOGELabel_teacherid}"/>
+                    <h:outputText value="#{bookOGEController.selected.teacherid}" title="#{bundle.ViewBookOGETitle_teacherid}"/>
+                    <h:outputText value="#{bundle.ViewBookOGELabel_studentid}"/>
+                    <h:outputText value="#{bookOGEController.selected.studentid}" title="#{bundle.ViewBookOGETitle_studentid}"/>
+                    <h:outputText value="#{bundle.ViewBookOGELabel_teamid}"/>
+                    <h:outputText value="#{bookOGEController.selected.teamid}" title="#{bundle.ViewBookOGETitle_teamid}"/>
+                    <h:outputText value="#{bundle.ViewBookOGELabel_classrid}"/>
+                    <h:outputText value="#{bookOGEController.selected.classrid}" title="#{bundle.ViewBookOGETitle_classrid}"/>
+                    <h:outputText value="#{bundle.ViewBookOGELabel_offenceid}"/>
+                    <h:outputText value="#{bookOGEController.selected.offenceid}" title="#{bundle.ViewBookOGETitle_offenceid}"/>
+                    <h:outputText value="#{bundle.ViewBookOGELabel_date}"/>
+                    <h:outputText value="#{bookOGEController.selected.date}" title="#{bundle.ViewBookOGETitle_date}">
+                        <f:convertDateTime pattern="MM/dd/yyyy" />
+                    </h:outputText>
+                </h:panelGrid>
+                <br />
+                <h:commandLink action="#{bookOGEController.destroyAndView}" value="#{bundle.ViewBookOGEDestroyLink}"/>
+                <br />
+                <br />
+                <h:link outcome="Edit" value="#{bundle.ViewBookOGEEditLink}"/>
+                <br />
+                <h:commandLink action="#{bookOGEController.prepareCreate}" value="#{bundle.ViewBookOGECreateLink}" />
+                <br />
+                <h:commandLink action="#{bookOGEController.prepareList}" value="#{bundle.ViewBookOGEShowAllLink}"/>
+                <br />
+                <br />
+                <h:link outcome="/index" value="#{bundle.ViewBookOGEIndexLink}"/>
+
+            </h:form>
+        </ui:define>
+    </ui:composition>
+
+</html>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resources>
+  <Resource id="bookingappwebogejndi" type="javax.sql.DataSource">#Mon May 16 17:30:08 WAT 2022
+
+jdbcDriver=com.mysql.cj.jdbc.Driver
+jdbcUrl=jdbc\:mysql\://localhost\:3306/bookings?serverTimezone\=UTC
+userName=root
+password=*1nctamtw30pclut?     
+</Resource>
+</resources>
